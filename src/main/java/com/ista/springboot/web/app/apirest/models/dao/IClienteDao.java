@@ -11,7 +11,7 @@ import com.ista.springboot.web.app.apirest.models.entity.Cliente;
 public interface IClienteDao extends JpaRepository<Cliente,Long> {
 	//select * from producto where CAST(idproducto AS TEXT) LIKE '" + texto + "%' or lower(nombre) like '" + texto + "%'"
 
-	@Query(value = "select * from db_springboot_backend.clientes where nombre like ?% or apellido like ?%",
+	@Query(value = "select * from railway.clientes where nombre like ?% or apellido like ?%",
 			nativeQuery = true
 	)
 	List<Cliente> busquedaLikeC(String id, String ape);
